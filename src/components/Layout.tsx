@@ -35,7 +35,7 @@ export default function Layout() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between py-2 items-center">
             <Link to="/" className="flex items-center space-x-3">
-              <img src="/logo.png" alt="Sarla Mobile Hut Logo" className="h-16 md:h-20 w-auto object-contain" />
+              <img src="/logo.png" alt="Sarla Mobile Hut Logo" className="h-24 md:h-32 w-auto object-contain" />
               <div>
                 <h1 className="font-bold text-lg md:text-xl leading-tight text-blue-900">{shopDetails.name}</h1>
                 <p className="text-xs text-gray-500 hidden sm:block">{shopDetails.tagline}</p>
