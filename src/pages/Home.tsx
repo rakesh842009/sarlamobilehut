@@ -156,7 +156,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="w-full bg-gray-900 hover:bg-gray-800 text-white py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center"
                   >
-                    Enquire Now
+                    Order Now
                   </a>
                 </div>
               </motion.div>

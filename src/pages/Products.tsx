@@ -103,7 +103,7 @@ export default function Products() {
                       rel="noopener noreferrer"
                       className="w-full bg-gray-900 hover:bg-gray-800 text-white py-2.5 rounded-lg text-sm font-medium transition-colors flex items-center justify-center"
                     >
-                      Enquire Now
+                      Order Now
                     </a>
                   </div>
                 </motion.div>
@@ -142,7 +142,7 @@ export default function Products() {
                       rel="noopener noreferrer"
                       className="w-full bg-blue-50 hover:bg-blue-100 text-blue-700 py-2.5 rounded-lg text-sm font-medium transition-colors flex items-center justify-center"
                     >
-                      Enquire Now
+                      Order Now
                     </a>
                   </div>
                 </motion.div>
