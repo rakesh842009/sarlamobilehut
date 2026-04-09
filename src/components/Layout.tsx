@@ -35,7 +35,7 @@ export default function Layout() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between py-2 items-center">
             <Link to="/" className="flex items-center space-x-3">
-              <img src="/logo.png" alt="Sarla Mobile Hut Logo" className="h-24 md:h-32 w-auto object-contain" />
+              <img src="/logo.png" alt="Sarla Mobile Hut Logo" className="h-24 md:h-32 w-auto object-contain" referrerPolicy="no-referrer" />
               <div>
                 <h1 className="font-bold text-lg md:text-xl leading-tight text-blue-900">{shopDetails.name}</h1>
                 <p className="text-xs text-gray-500 hidden sm:block">{shopDetails.tagline}</p>
@@ -103,7 +103,7 @@ export default function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <img src="/logo.png" alt="Sarla Mobile Hut Logo" className="h-10 w-auto object-contain bg-white rounded p-1" />
+                <img src="/logo.png" alt="Sarla Mobile Hut Logo" className="h-10 w-auto object-contain bg-white rounded p-1" referrerPolicy="no-referrer" />
                 <h2 className="font-bold text-xl">{shopDetails.name}</h2>
               </div>
               <p className="text-gray-400 text-sm mb-4">{shopDetails.tagline}</p>
