@@ -5,7 +5,7 @@
   established: 2010,
   address: {
     line1: "B-2450 Near 22 Feet Road",
-    line2: "SGM Nagar nit, faridabad",
+    line2: "SGM Nagar NIT, Faridabad",
     city: "Faridabad",
     state: "Haryana",
     pincode: "121001",
