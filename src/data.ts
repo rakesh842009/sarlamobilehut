@@ -62,7 +62,7 @@ export const offers = [
 ];
 
 export const reviews = [
-  { name: "Amit", rating: 5, comment: "Best repair service in Karol Bagh!" },
+  { name: "Amit", rating: 5, comment: "Best repair service in Faridabad!" },
   { name: "Neha", rating: 4, comment: "Affordable prices and genuine products" },
   { name: "Rahul", rating: 5, comment: "Quick service, very reliable shop" },
 ];
