@@ -54,7 +54,7 @@ export default function Layout() {
           <div className="flex items-center space-x-4">
             <div className="flex items-center bg-blue-800 px-3 py-1 rounded-full border border-blue-700">
               <ClockIcon className="w-4 h-4 mr-2 text-blue-300" />
-              <span className="font-mono">{currentTime.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}</span>
+              <span className="font-mono text-red-500 font-bold">{currentTime.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}</span>
               {getShopStatus()}
             </div>
             <div className="flex items-center">
