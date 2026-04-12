@@ -37,7 +37,7 @@ export default function Contact() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col items-center">
-          <img src="/logo.png" alt="Sarla Mobile Hut Logo" className="h-36 w-auto object-contain mb-6" referrerPolicy="no-referrer" />
+          <img src="/logo.svg" alt="Sarla Mobile Hut Logo" className="h-36 w-auto object-contain mb-6" referrerPolicy="no-referrer" />
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
           <p className="text-lg text-gray-600">
             Have a question, need a repair quote, or looking for a specific device? We're here to help.
