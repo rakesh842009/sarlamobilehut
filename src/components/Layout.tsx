@@ -6,6 +6,7 @@ import { shopDetails } from '../data';
 export default function Layout() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [currentTime, setCurrentTime] = useState(new Date());
+  const [logoError, setLogoError] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -68,11 +69,23 @@ export default function Layout() {
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between py-2 items-center">
-            <Link to="/" className="flex items-center space-x-3">
-              <img src="/logo.png" alt="Sarla Mobile Hut Logo" className="h-24 md:h-32 w-auto object-contain" referrerPolicy="no-referrer" />
+            <Link to="/" className="flex items-center space-x-3 group">
+              {!logoError ? (
+                <img 
+                  src="/logo.png" 
+                  alt="Sarla Mobile Hut Logo" 
+                  className="h-12 md:h-16 w-auto object-contain transition-transform group-hover:scale-105" 
+                  referrerPolicy="no-referrer"
+                  onError={() => setLogoError(true)}
+                />
+              ) : (
+                <div className="bg-blue-600 p-2 rounded-xl text-white shadow-md group-hover:bg-blue-700 transition-colors">
+                  <Smartphone className="w-8 h-8" />
+                </div>
+              )}
               <div>
-                <h1 className="font-bold text-lg md:text-xl leading-tight text-blue-900">{shopDetails.name}</h1>
-                <p className="text-xs text-gray-500 hidden sm:block">{shopDetails.tagline}</p>
+                <h1 className="font-display font-bold text-xl md:text-2xl leading-tight text-blue-900 group-hover:text-blue-700 transition-colors tracking-tight">{shopDetails.name}</h1>
+                <p className="text-xs font-medium text-gray-500 hidden sm:block tracking-wide uppercase">{shopDetails.tagline}</p>
               </div>
             </Link>
 
@@ -136,9 +149,21 @@ export default function Layout() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <img src="/logo.png" alt="Sarla Mobile Hut Logo" className="h-10 w-auto object-contain bg-white rounded p-1" referrerPolicy="no-referrer" />
-                <h2 className="font-bold text-xl">{shopDetails.name}</h2>
+              <div className="flex items-center space-x-2 mb-4 group">
+                {!logoError ? (
+                  <img 
+                    src="/logo.png" 
+                    alt="Sarla Mobile Hut Logo" 
+                    className="h-10 w-auto object-contain bg-white rounded p-1" 
+                    referrerPolicy="no-referrer"
+                    onError={() => setLogoError(true)}
+                  />
+                ) : (
+                  <div className="bg-blue-600 p-1.5 rounded text-white">
+                    <Smartphone className="w-5 h-5" />
+                  </div>
+                )}
+                <h2 className="font-display font-bold text-xl group-hover:text-blue-400 transition-colors tracking-tight">{shopDetails.name}</h2>
               </div>
               <p className="text-gray-400 text-sm mb-4">{shopDetails.tagline}</p>
               <p className="text-gray-400 text-sm">Established in {shopDetails.established}</p>
