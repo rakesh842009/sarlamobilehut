@@ -74,7 +74,7 @@ export default function About() {
               <div className="mx-auto w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center mb-4">
                 <Award className="w-6 h-6 text-blue-300" />
               </div>
-              <h3 className="text-3xl font-bold mb-2">6+</h3>
+              <h3 className="text-3xl font-bold mb-2">{new Date().getFullYear() - shopDetails.established}+</h3>
               <p className="text-blue-200 text-sm uppercase tracking-wider">Years Experience</p>
             </div>
             <div className="p-4">

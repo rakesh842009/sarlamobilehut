@@ -5,9 +5,9 @@
   established: 2010,
   address: {
     line1: "B-2450 Near 22 Feet Road",
-    line2: "SGM Nagar nit, faridabad",
-    city: "faridabad",
-    state: "haryana",
+    line2: "SGM Nagar NIT, Faridabad",
+    city: "Faridabad",
+    state: "Haryana",
     pincode: "121001",
     country: "India",
   },
@@ -31,7 +31,7 @@ export const smartphones = [
 ];
 
 export const repairServices = [
-  { service: "Screen Replacement", priceRange: "₹800 – ₹2500", icon: "smartphone", image: "https://www.youtube.com/watch?v=WK3HZyTb4N8" },
+  { service: "Screen Replacement", priceRange: "₹800 – ₹2500", icon: "smartphone", image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80" },
   { service: "Battery Replacement", priceRange: "₹500 – ₹1500", icon: "battery" },
   { service: "Charging Port Repair", priceRange: "₹100 – ₹800", icon: "plug" },
   { service: "Software Update/Flash", priceRange: "₹200 – ₹500", icon: "cpu" },

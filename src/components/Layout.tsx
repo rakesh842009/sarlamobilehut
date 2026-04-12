@@ -1,11 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { Smartphone, Wrench, ShoppingBag, Info, Phone, Menu, X, MapPin, Clock } from 'lucide-react';
+import { Smartphone, Wrench, ShoppingBag, Info, Phone, Menu, X, MapPin, Clock as ClockIcon } from 'lucide-react';
 import { shopDetails } from '../data';
 
 export default function Layout() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [currentTime, setCurrentTime] = useState(new Date());
   const location = useLocation();
+
+  useEffect(() => {
+    const timer = setInterval(() => setCurrentTime(new Date()), 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const getShopStatus = () => {
+    const day = currentTime.getDay(); // 0 is Sunday
+    const hour = currentTime.getHours();
+    const minutes = currentTime.getMinutes();
+    const timeInMinutes = hour * 60 + minutes;
+
+    // Monday - Saturday: 9:00 AM (540 mins) – 10:30 PM (1350 mins)
+    // Sunday: 10:00 AM (600 mins) – 9:00 PM (1260 mins)
+    
+    let isOpen = false;
+    if (day === 0) { // Sunday
+      if (timeInMinutes >= 600 && timeInMinutes < 1260) isOpen = true;
+    } else { // Mon-Sat
+      if (timeInMinutes >= 540 && timeInMinutes < 1350) isOpen = true;
+    }
+    
+    return isOpen ? 
+      <span className="text-green-400 font-bold ml-2 flex items-center"><span className="w-2 h-2 bg-green-400 rounded-full mr-1 animate-pulse"></span> OPEN NOW</span> : 
+      <span className="text-red-400 font-bold ml-2 flex items-center"><span className="w-2 h-2 bg-red-400 rounded-full mr-1"></span> CLOSED</span>;
+  };
 
   const navLinks = [
     { name: 'Home', path: '/', icon: <Smartphone className="w-4 h-4" /> },
@@ -24,8 +51,15 @@ export default function Layout() {
             <span className="flex items-center"><Phone className="w-4 h-4 mr-2" /> {shopDetails.contact.mobile}</span>
             <span className="flex items-center"><MapPin className="w-4 h-4 mr-2" /> {shopDetails.address.city}, {shopDetails.address.state}</span>
           </div>
-          <div className="flex items-center">
-            <Clock className="w-4 h-4 mr-2" /> {shopDetails.workingHours[0].days}: {shopDetails.workingHours[0].hours}
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center bg-blue-800 px-3 py-1 rounded-full border border-blue-700">
+              <ClockIcon className="w-4 h-4 mr-2 text-blue-300" />
+              <span className="font-mono">{currentTime.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}</span>
+              {getShopStatus()}
+            </div>
+            <div className="flex items-center">
+              <ClockIcon className="w-4 h-4 mr-2" /> {shopDetails.workingHours[0].days}: {shopDetails.workingHours[0].hours}
+            </div>
           </div>
         </div>
       </div>
@@ -35,7 +69,7 @@ export default function Layout() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between py-2 items-center">
             <Link to="/" className="flex items-center space-x-3">
-              <img src="/logo.png" alt="Sarla Mobile Hut Logo" className="h-16 md:h-20 w-auto object-contain" />
+              <img src="/logo.png" alt="Sarla Mobile Hut Logo" className="h-24 md:h-32 w-auto object-contain" referrerPolicy="no-referrer" />
               <div>
                 <h1 className="font-bold text-lg md:text-xl leading-tight text-blue-900">{shopDetails.name}</h1>
                 <p className="text-xs text-gray-500 hidden sm:block">{shopDetails.tagline}</p>
@@ -103,7 +137,7 @@ export default function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <img src="/logo.png" alt="Sarla Mobile Hut Logo" className="h-10 w-auto object-contain bg-white rounded p-1" />
+                <img src="/logo.png" alt="Sarla Mobile Hut Logo" className="h-10 w-auto object-contain bg-white rounded p-1" referrerPolicy="no-referrer" />
                 <h2 className="font-bold text-xl">{shopDetails.name}</h2>
               </div>
               <p className="text-gray-400 text-sm mb-4">{shopDetails.tagline}</p>
