@@ -72,9 +72,9 @@ export default function Layout() {
             <Link to="/" className="flex items-center space-x-3 group">
               {!logoError ? (
                 <img 
-                  src="/logo.svg" 
+                  src="/logo.png" 
                   alt="Sarla Mobile Hut Logo" 
-                  className="h-12 md:h-16 w-auto object-contain transition-transform group-hover:scale-105" 
+                  className="h-16 md:h-24 w-auto object-contain transition-transform group-hover:scale-105" 
                   referrerPolicy="no-referrer"
                   onError={() => setLogoError(true)}
                 />
@@ -152,9 +152,9 @@ export default function Layout() {
               <div className="flex items-center space-x-2 mb-4 group">
                 {!logoError ? (
                   <img 
-                    src="/logo.svg" 
+                    src="/logo.png" 
                     alt="Sarla Mobile Hut Logo" 
-                    className="h-10 w-auto object-contain bg-white rounded p-1" 
+                    className="h-12 w-auto object-contain bg-white rounded p-1" 
                     referrerPolicy="no-referrer"
                     onError={() => setLogoError(true)}
                   />
