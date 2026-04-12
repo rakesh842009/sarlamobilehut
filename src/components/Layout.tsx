@@ -6,7 +6,6 @@ import { shopDetails } from '../data';
 export default function Layout() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [currentTime, setCurrentTime] = useState(new Date());
-  const [logoError, setLogoError] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -70,19 +69,14 @@ export default function Layout() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between py-2 items-center">
             <Link to="/" className="flex items-center space-x-3 group">
-              {!logoError ? (
+              <div className="bg-white rounded-lg p-1 shadow-sm transition-transform group-hover:scale-105">
                 <img 
-                  src="/logo.png" 
+                  key={Date.now()}
+                  src="./logo.png" 
                   alt="Sarla Mobile Hut Logo" 
-                  className="h-16 md:h-24 w-auto object-contain transition-transform group-hover:scale-105" 
-                  referrerPolicy="no-referrer"
-                  onError={() => setLogoError(true)}
+                  className="h-16 md:h-24 w-auto object-contain" 
                 />
-              ) : (
-                <div className="bg-blue-600 p-2 rounded-xl text-white shadow-md group-hover:bg-blue-700 transition-colors">
-                  <Smartphone className="w-8 h-8" />
-                </div>
-              )}
+              </div>
               <div>
                 <h1 className="font-display font-bold text-xl md:text-2xl leading-tight text-blue-900 group-hover:text-blue-700 transition-colors tracking-tight">{shopDetails.name}</h1>
                 <p className="text-xs font-medium text-gray-500 hidden sm:block tracking-wide uppercase">{shopDetails.tagline}</p>
@@ -150,19 +144,13 @@ export default function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4 group">
-                {!logoError ? (
+                <div className="bg-white rounded p-1 shadow-sm">
                   <img 
-                    src="/logo.png" 
+                    src="./logo.png" 
                     alt="Sarla Mobile Hut Logo" 
-                    className="h-12 w-auto object-contain bg-white rounded p-1" 
-                    referrerPolicy="no-referrer"
-                    onError={() => setLogoError(true)}
+                    className="h-12 w-auto object-contain" 
                   />
-                ) : (
-                  <div className="bg-blue-600 p-1.5 rounded text-white">
-                    <Smartphone className="w-5 h-5" />
-                  </div>
-                )}
+                </div>
                 <h2 className="font-display font-bold text-xl group-hover:text-blue-400 transition-colors tracking-tight">{shopDetails.name}</h2>
               </div>
               <p className="text-gray-400 text-sm mb-4">{shopDetails.tagline}</p>
