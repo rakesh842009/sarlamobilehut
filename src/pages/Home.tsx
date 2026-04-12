@@ -55,7 +55,7 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="max-w-2xl"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-display font-bold mb-4 leading-tight tracking-tight">
               Your Trusted <span className="text-blue-400">Mobile Shop</span> In Faridabad
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-8">
@@ -77,7 +77,7 @@ export default function Home() {
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">Featured Deals</h2>
+            <h2 className="text-3xl font-display font-bold text-gray-900 mb-2 tracking-tight">Featured Deals</h2>
             <p className="text-gray-600">Check out our latest arrivals and exclusive offers.</p>
           </div>
           <Carousel items={carouselItems} />
@@ -103,7 +103,7 @@ export default function Home() {
                     <Icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg text-gray-900">{offer.title}</h3>
+                    <h3 className="font-display font-bold text-lg text-gray-900 tracking-tight">{offer.title}</h3>
                     <p className="text-gray-600 text-sm">{offer.description}</p>
                   </div>
                 </motion.div>
@@ -118,7 +118,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-8">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">Featured Smartphones</h2>
+              <h2 className="text-3xl font-display font-bold text-gray-900 mb-2 tracking-tight">Featured Smartphones</h2>
               <p className="text-gray-600">Discover our top-selling devices at unbeatable prices.</p>
             </div>
             <Link to="/products" className="text-blue-600 font-medium hover:text-blue-800 flex items-center hidden sm:flex">
@@ -148,8 +148,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-4">
-                  <h3 className="font-bold text-lg text-gray-900 mb-1">{phone.model}</h3>
-                  <p className="text-xl font-bold text-blue-600 mb-4">₹{phone.price.toLocaleString('en-IN')}</p>
+                  <h3 className="font-display font-bold text-lg text-gray-900 mb-1 tracking-tight">{phone.model}</h3>
+                  <p className="text-xl font-bold text-blue-600 mb-4 font-sans">₹{phone.price.toLocaleString('en-IN')}</p>
                   <a 
                     href={`https://wa.me/${shopDetails.contact.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent(`Hi, I want to enquire about the ${phone.brand} ${phone.model}.`)}`}
                     target="_blank"
@@ -174,7 +174,7 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Expert Repair Services</h2>
+            <h2 className="text-3xl font-display font-bold text-gray-900 mb-4 tracking-tight">Expert Repair Services</h2>
             <p className="text-gray-600">Fast, reliable, and affordable repairs by certified technicians. We fix it right the first time.</p>
           </div>
           
@@ -185,10 +185,10 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-sm transition-all"
+                className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-sm transition-all group"
               >
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="font-bold text-lg text-gray-900">{service.service}</h3>
+                  <h3 className="font-display font-bold text-lg text-gray-900 tracking-tight group-hover:text-blue-600 transition-colors">{service.service}</h3>
                   <span className="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">
                     {service.priceRange}
                   </span>
@@ -206,7 +206,7 @@ export default function Home() {
       {/* Testimonials */}
       <section className="py-16 bg-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
+          <h2 className="text-3xl font-display font-bold text-center mb-12 tracking-tight">What Our Customers Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {reviews.map((review, index) => (
               <motion.div 
@@ -251,7 +251,7 @@ export default function Home() {
               />
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose {shopDetails.name}?</h2>
+              <h2 className="text-3xl font-display font-bold text-gray-900 mb-6 tracking-tight">Why Choose {shopDetails.name}?</h2>
               <div className="space-y-6">
                 <div className="flex">
                   <div className="flex-shrink-0">
@@ -260,7 +260,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg leading-6 font-medium text-gray-900">Genuine Products</h3>
+                    <h3 className="text-lg leading-6 font-display font-bold text-gray-900 tracking-tight">Genuine Products</h3>
                     <p className="mt-2 text-base text-gray-500">We only sell 100% authentic smartphones and accessories with official warranties.</p>
                   </div>
                 </div>
@@ -271,7 +271,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg leading-6 font-medium text-gray-900">Quick Repairs</h3>
+                    <h3 className="text-lg leading-6 font-display font-bold text-gray-900 tracking-tight">Quick Repairs</h3>
                     <p className="mt-2 text-base text-gray-500">Most common repairs like screen and battery replacements are done within hours.</p>
                   </div>
                 </div>
@@ -282,7 +282,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg leading-6 font-medium text-gray-900">Trusted Since {shopDetails.established}</h3>
+                    <h3 className="text-lg leading-6 font-display font-bold text-gray-900 tracking-tight">Trusted Since {shopDetails.established}</h3>
                     <p className="mt-2 text-base text-gray-500">Years of experience serving the Faridabad community with honest pricing.</p>
                   </div>
                 </div>

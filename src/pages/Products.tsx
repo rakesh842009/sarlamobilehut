@@ -22,7 +22,7 @@ export default function Products() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Products</h1>
+          <h1 className="text-4xl font-display font-bold text-gray-900 mb-4 tracking-tight">Our Products</h1>
           <p className="text-lg text-gray-600">
             Browse our extensive collection of the latest smartphones and premium accessories.
           </p>
@@ -95,8 +95,8 @@ export default function Products() {
                     </div>
                   </div>
                   <div className="p-5 flex flex-col flex-grow">
-                    <h3 className="font-bold text-lg text-gray-900 mb-1">{phone.model}</h3>
-                    <p className="text-2xl font-bold text-blue-600 mb-4 mt-auto">₹{phone.price.toLocaleString('en-IN')}</p>
+                    <h3 className="font-display font-bold text-lg text-gray-900 mb-1 tracking-tight">{phone.model}</h3>
+                    <p className="text-2xl font-bold text-blue-600 mb-4 mt-auto font-sans">₹{phone.price.toLocaleString('en-IN')}</p>
                     <a 
                       href={`https://wa.me/${shopDetails.contact.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent(`Hi, I want to enquire about the ${phone.brand} ${phone.model}.`)}`}
                       target="_blank"
@@ -134,8 +134,8 @@ export default function Products() {
                     />
                   </div>
                   <div className="p-5 flex flex-col flex-grow">
-                    <h3 className="font-bold text-lg text-gray-900 mb-2">{acc.product}</h3>
-                    <p className="text-xl font-bold text-blue-600 mb-4 mt-auto">{acc.priceRange}</p>
+                    <h3 className="font-display font-bold text-lg text-gray-900 mb-2 tracking-tight">{acc.product}</h3>
+                    <p className="text-xl font-bold text-blue-600 mb-4 mt-auto font-sans">{acc.priceRange}</p>
                     <a 
                       href={`https://wa.me/${shopDetails.contact.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent(`Hi, I want to enquire about the ${acc.product}.`)}`}
                       target="_blank"

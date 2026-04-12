@@ -38,7 +38,7 @@ export default function Contact() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col items-center">
           <img src="/logo.png" alt="Sarla Mobile Hut Logo" className="h-48 w-auto object-contain mb-6" referrerPolicy="no-referrer" />
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+          <h1 className="text-4xl font-display font-bold text-gray-900 mb-4 tracking-tight">Contact Us</h1>
           <p className="text-lg text-gray-600">
             Have a question, need a repair quote, or looking for a specific device? We're here to help.
           </p>
@@ -53,7 +53,7 @@ export default function Contact() {
               animate={{ opacity: 1, y: 0 }}
               className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100"
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-6 border-b pb-4">Store Information</h3>
+              <h3 className="text-xl font-display font-bold text-gray-900 mb-6 border-b pb-4 tracking-tight">Store Information</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start">
@@ -116,7 +116,7 @@ export default function Contact() {
               transition={{ delay: 0.1 }}
               className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 h-full"
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-6 border-b pb-4">Send us a Message</h3>
+              <h3 className="text-xl font-display font-bold text-gray-900 mb-6 border-b pb-4 tracking-tight">Send us a Message</h3>
               
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -209,7 +209,7 @@ export default function Contact() {
                 <div className="bg-blue-600 p-2 rounded-lg text-white">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <h4 className="font-bold text-gray-900">Visit Our Store</h4>
+                <h4 className="font-display font-bold text-gray-900 tracking-tight">Visit Our Store</h4>
               </div>
               <p className="text-xs text-gray-600 mb-3">
                 {shopDetails.address.line1}, {shopDetails.address.line2}, {shopDetails.address.city}

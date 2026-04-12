@@ -22,7 +22,7 @@ export default function Services() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Professional Repair Services</h1>
+          <h1 className="text-4xl font-display font-bold text-gray-900 mb-4 tracking-tight">Professional Repair Services</h1>
           <p className="text-lg text-gray-600">
             Expert technicians, genuine parts, and quick turnaround times. We bring your devices back to life.
           </p>
@@ -44,7 +44,7 @@ export default function Services() {
                 <div className="text-blue-600 mb-6 bg-blue-50 w-16 h-16 rounded-xl flex items-center justify-center">
                   {getIcon(service.icon)}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{service.service}</h3>
+                <h3 className="text-xl font-display font-bold text-gray-900 mb-2 tracking-tight">{service.service}</h3>
                 <div className="flex items-end mb-6">
                   <span className="text-sm text-gray-500 mr-2">Estimated:</span>
                   <span className="text-lg font-bold text-green-600">{service.priceRange}</span>
@@ -77,7 +77,7 @@ export default function Services() {
         >
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
             <div className="mb-6 md:mb-0 md:mr-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Warranty Policy</h2>
+              <h2 className="text-2xl font-display font-bold text-gray-900 mb-4 tracking-tight">Our Warranty Policy</h2>
               <p className="text-gray-600 mb-4">
                 We stand behind our work. All our repair services come with a standard warranty to give you peace of mind.
               </p>
@@ -100,7 +100,7 @@ export default function Services() {
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <ShieldCheck className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="font-bold text-gray-900 mb-1">Guaranteed Quality</h3>
+              <h3 className="font-display font-bold text-gray-900 mb-1 tracking-tight">Guaranteed Quality</h3>
               <p className="text-sm text-gray-500">100% Satisfaction</p>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function Services() {
         <div className="bg-blue-900 rounded-3xl overflow-hidden shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="p-10 md:p-16 flex flex-col justify-center">
-              <h2 className="text-3xl font-bold text-white mb-6">More Than Just Repairs</h2>
+              <h2 className="text-3xl font-display font-bold text-white mb-6 tracking-tight">More Than Just Repairs</h2>
               <p className="text-blue-200 mb-8 text-lg">
                 At {shopDetails.name}, we provide a comprehensive range of mobile solutions to meet all your needs under one roof.
               </p>

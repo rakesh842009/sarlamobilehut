@@ -10,7 +10,7 @@ export default function About() {
       <div className="bg-gray-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">About {shopDetails.name}</h1>
+            <h1 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6 tracking-tight">About {shopDetails.name}</h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               Serving the Faridabad community since {shopDetails.established} with top-notch mobile solutions, honest pricing, and unparalleled customer service.
             </p>
@@ -27,7 +27,7 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
+              <h2 className="text-3xl font-display font-bold text-gray-900 mb-6 tracking-tight">Our Story</h2>
               <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                 <p>
                   Founded in {shopDetails.established} by {shopDetails.owner}, {shopDetails.name} started with a simple mission: to provide reliable and affordable mobile repair services in Faridabad.
@@ -74,28 +74,28 @@ export default function About() {
               <div className="mx-auto w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center mb-4">
                 <Award className="w-6 h-6 text-blue-300" />
               </div>
-              <h3 className="text-3xl font-bold mb-2">{new Date().getFullYear() - shopDetails.established}+</h3>
+              <h3 className="text-3xl font-display font-bold mb-2 tracking-tight">{new Date().getFullYear() - shopDetails.established}+</h3>
               <p className="text-blue-200 text-sm uppercase tracking-wider">Years Experience</p>
             </div>
             <div className="p-4">
               <div className="mx-auto w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center mb-4">
                 <Users className="w-6 h-6 text-blue-300" />
               </div>
-              <h3 className="text-3xl font-bold mb-2">10k+</h3>
+              <h3 className="text-3xl font-display font-bold mb-2 tracking-tight">10k+</h3>
               <p className="text-blue-200 text-sm uppercase tracking-wider">Happy Customers</p>
             </div>
             <div className="p-4">
               <div className="mx-auto w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center mb-4">
                 <Target className="w-6 h-6 text-blue-300" />
               </div>
-              <h3 className="text-3xl font-bold mb-2">100%</h3>
+              <h3 className="text-3xl font-display font-bold mb-2 tracking-tight">100%</h3>
               <p className="text-blue-200 text-sm uppercase tracking-wider">Genuine Parts</p>
             </div>
             <div className="p-4">
               <div className="mx-auto w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center mb-4">
                 <Clock className="w-6 h-6 text-blue-300" />
               </div>
-              <h3 className="text-3xl font-bold mb-2">24hr</h3>
+              <h3 className="text-3xl font-display font-bold mb-2 tracking-tight">24hr</h3>
               <p className="text-blue-200 text-sm uppercase tracking-wider">Avg Repair Time</p>
             </div>
           </div>
